@@ -52,3 +52,5 @@ def test_factorial():
         assert str(e) == "Factorial is not defined for negative numbers"
 
 test_factorial()
+
+# Added this
