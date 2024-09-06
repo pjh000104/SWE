@@ -4,10 +4,17 @@ import unittest
 class myClass:
     def myMethod(self, x):
         return x+5
+    def subtractMethod(self, x):
+        return x - 3  # New method in myClass added by hiruy
 
 
 class myChildClass(myClass):
     pass
+
+# added the following class
+class myOtherClass(myClass):
+    def myMethod(self, x):
+        return x * 3
 
 # assert myclass.myMethod(2)>=10, "parameter is less than 5"
 # assert myChildClass.myMethod(2)>=10, "parameter is less than 5"
@@ -34,6 +41,10 @@ def test_is_palindrome():
     assert is_palindrome("hello") == False
     assert is_palindrome("") == True
     assert is_palindrome("No 'x' in Nixon") == True
+
+def testSubtract(self):
+    myclass = myClass()
+    self.assertEqual(myclass.subtractMethod(10), 7)
 
 def factorial(n: int) -> int:
     if n < 0:
